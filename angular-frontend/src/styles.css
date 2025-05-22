@@ -14,3 +14,12 @@
   text-align: center;
   color: white;
 }
+
+.footer .container {
+  height: 100%;
+  display: flex;
+}
+
+.footer span {
+  margin: auto;
+}

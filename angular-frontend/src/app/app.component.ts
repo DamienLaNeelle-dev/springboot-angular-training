@@ -10,5 +10,5 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-frontend';
+  title = 'Angular & Spring Boot Training App';
 }
