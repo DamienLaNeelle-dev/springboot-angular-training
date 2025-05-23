@@ -52,6 +52,16 @@ public class EmployeeController {
 
         Employee updatedEmployee = employeeRepository.save(employee);
         return ResponseEntity.ok(updatedEmployee);
-
     }
+
+    //delete employee API rest
+    @DeleteMapping("/employees/{id}")
+    public ResponseEntity<Employee> deleteEmployee(@PathVariable Long id){
+        Employee employee = employeeRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Employee doesn't exist with id : " + id));
+
+        employeeRepository.delete(employee);
+        return ResponseEntity.ok(employee);
+    }
+
     }
