@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class DetailsEmployeeComponent {
   id!: number;
-  employee: Employee = new Employee();
+  employee!: Employee;
 
   constructor(
     private employeeService: EmployeeService,
@@ -29,6 +29,7 @@ export class DetailsEmployeeComponent {
       );
     } catch (error) {
       console.log(error);
+      alert('No employee with this id');
     }
   }
 }
