@@ -47,4 +47,8 @@ export class EmployeeListComponent {
       alert('Delete error');
     }
   }
+
+  detailsEmployee(id: number) {
+    this.router.navigate(['details-employee', id]);
+  }
 }
